@@ -14,10 +14,9 @@ function generateID($prefix, $table, $field) {
     $result = mysqli_query($koneksi, $query);
     $row = mysqli_fetch_assoc($result);
     
-    // Jika tidak ada data, mulai dari 0
+   
     $max_id = $row['max_id'] ?? 0;
     
-    // Return ID dengan prefix + angka yang di-pad
     return $prefix . str_pad($max_id + 1, 3, '0', STR_PAD_LEFT);
 }
 
