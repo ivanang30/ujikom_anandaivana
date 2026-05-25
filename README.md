@@ -1,8 +1,4 @@
-# Aplikasi Manajemen Pembayaran SPP Siswa
 
-Aplikasi web berbasis PHP Native untuk mengelola pembayaran SPP (Sumbangan Pembinaan Pendidikan) siswa di sekolah.
-
-## 📋 Fitur Utama
 
 - **Dashboard** - Menampilkan statistik pembayaran SPP
 - **Data Siswa** - CRUD data siswa dengan informasi lengkap
@@ -13,7 +9,7 @@ Aplikasi web berbasis PHP Native untuk mengelola pembayaran SPP (Sumbangan Pembi
 - **Data Petugas** - Manajemen user dan level akses (Admin only)
 - **Sistem Login** - Autentikasi dengan role-based access control
 
-## 🗄️ Struktur Database
+
 
 ### Tabel-tabel yang digunakan:
 
@@ -35,33 +31,7 @@ Aplikasi web berbasis PHP Native untuk mengelola pembayaran SPP (Sumbangan Pembi
 6. **tb_petugas** - Data petugas/user
    - id_petugas (PK), username, password, nama_petugas, level (admin/petugas/siswa)
 
-## 🚀 Instalasi
-
-### 1. Setup Database
-
-1. Buka SQLyog atau MySQL client favorit Anda
-2. Jalankan query dari file `database.sql`:
-   - Copy semua query dari file `database.sql`
-   - Paste ke SQLyog dan execute
-   - Database `db_spp` akan terbuat beserta semua tabel dan data sample
-
-### 2. Konfigurasi Koneksi Database
-
-Edit file `config/koneksi.php` sesuaikan dengan konfigurasi MySQL Anda:
-
-```php
-define('DB_HOST', 'localhost');  // Host MySQL
-define('DB_USER', 'root');       // Username MySQL
-define('DB_PASS', '');           // Password MySQL
-define('DB_NAME', 'db_spp');     // Nama database
-```
-
-### 3. Jalankan Aplikasi
-
-1. Letakkan folder aplikasi di folder `htdocs` (XAMPP) atau `www` (WAMP)
-2. Buka browser dan akses: `http://localhost/nama-folder/login.php`
-
-## 👤 Akun Demo
+## Akun 
 
 Setelah menjalankan `database.sql`, gunakan akun berikut untuk login:
 
@@ -115,14 +85,14 @@ aplikasi-spp/
 └── README.md                # Dokumentasi
 ```
 
-## 🔐 Fitur Keamanan
+##  Fitur Keamanan
 
 - **Session Management** - Proteksi halaman dengan session check
 - **Role-Based Access Control** - Pembatasan akses berdasarkan level user
 - **Input Validation** - Validasi dan sanitasi input dari user
 - **SQL Injection Prevention** - Menggunakan mysqli_real_escape_string
 
-## 🎨 Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 - **Backend**: PHP Native (Procedural)
 - **Database**: MySQL
@@ -130,7 +100,7 @@ aplikasi-spp/
 - **JavaScript**: jQuery, DataTables
 - **Icons**: Font Awesome 6
 
-## 📝 Fitur Setiap Modul
+
 
 ### Dashboard
 - Menampilkan statistik total siswa, pembayaran sudah lunas, dan belum lunas
@@ -164,7 +134,7 @@ aplikasi-spp/
 - Pengaturan level akses (Admin, Petugas, Siswa)
 - CRUD petugas
 
-## 🔧 Fungsi-Fungsi Penting
+
 
 ### config/fungsi.php
 
@@ -179,54 +149,4 @@ aplikasi-spp/
 - `redirect()` - Redirect dengan pesan
 - `tampilPesan()` - Tampilkan pesan session
 
-## 📊 Contoh Penggunaan
-
-### Login
-1. Akses `http://localhost/aplikasi-spp/login.php`
-2. Masukkan username: `admin` dan password: `admin123`
-3. Klik Login
-
-### Tambah Data Siswa
-1. Dari dashboard, klik menu "Data Siswa"
-2. Klik tombol "Tambah Siswa"
-3. Isi form dengan data siswa
-4. Klik "Simpan"
-
-### Catat Pembayaran
-1. Dari dashboard, klik menu "Pembayaran"
-2. Klik tombol "Tambah Pembayaran"
-3. Pilih siswa, isi tanggal dan nominal pembayaran
-4. Klik "Simpan"
-
-## ⚠️ Catatan Penting
-
-- Pastikan MySQL server sudah running sebelum mengakses aplikasi
-- Sesuaikan konfigurasi database di `config/koneksi.php`
-- Gunakan password yang kuat untuk akun admin
-- Backup database secara berkala
-- Jangan ubah struktur folder tanpa update path di file PHP
-
-## 🐛 Troubleshooting
-
-### Koneksi Database Gagal
-- Pastikan MySQL server running
-- Cek username dan password di `config/koneksi.php`
-- Pastikan database `db_spp` sudah dibuat
-
-### Session Tidak Bekerja
-- Pastikan folder `tmp` di server memiliki permission write
-- Cek setting `session.save_path` di php.ini
-
-### Halaman Blank
-- Cek error log di browser console (F12)
-- Cek error log PHP di folder logs
-
-## 📞 Support
-
-Untuk pertanyaan atau masalah, silakan hubungi administrator sistem.
-
----
-
-**Versi**: 1.0  
-**Terakhir Update**: 2026  
-**Status**: Production Ready
+on Ready
